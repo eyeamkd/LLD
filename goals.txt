@@ -1,0 +1,7 @@
+1. Ability to solve any LC Hard problem 
+2. Ability to solve any LLD Question 
+3. Ability to solve any HLD Question 
+4. Language proficiency in JS, TS and C# 
+5. Frontend framework proficiency in React and Next 
+6. Backend framework proficiency in Node and .NET 
+7. Ability to solve any hard SQL/NoSQL question 

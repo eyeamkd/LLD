@@ -1,3 +1,7 @@
+// So any feature that has multiple variants in it and if each variant is to be 
+// used by multiple base classes then, we bind it to a common interface have it specifically 
+// implemented and then do Dependency inversion on the base class with the interface 
+// so that any child classes can call their own version of this function directly 
 
 interface Drive{
     drive();
