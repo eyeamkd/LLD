@@ -38,7 +38,7 @@ class RadixSort implements Sorter{
 class SortingLibrary{
     private sorter : Sorter;
     private data;
-    constructor(sorter : Sorter, data ) {
+    constructor(sorter : Sorter, data : any ) {
         this.sorter = sorter;
         this.data = data;
     } 

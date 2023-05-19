@@ -19,28 +19,31 @@ more maintainable and extensible?
  */
 
 interface BankAccount{
-    CheckBalance():Number
-    Deposit(amount : Number):Number 
-    Withdrawl(amount : Number)
+    CheckBalance():number
+    Deposit(amount : number):number 
+    Withdrawl(amount : number) : number
 }
 
 class SavingAccount implements BankAccount { 
 
-    private MaxiumWithdrawlsPerMonth : Number; 
-    private CurrentWithdrawls : Number;
-    private Balance : Number;
+    private MaxiumWithdrawlsPerMonth : number; 
+    private CurrentWithdrawls : number = 0;
+    private Balance : number = 0;
 
-    constructor(maxWithdrawlsPerMonth : Number) {
+    constructor(maxWithdrawlsPerMonth : number) {
         this.MaxiumWithdrawlsPerMonth = maxWithdrawlsPerMonth
         
     }
+
     CheckBalance(): number {
         throw new Error("Method not implemented.")
     }
+
     Deposit(amount: number): number {
         throw new Error("Method not implemented.")
     }
-    Withdrawl(amount: number) { 
+
+    Withdrawl(amount: number): number{ 
         if(this.CurrentWithdrawls >= this.MaxiumWithdrawlsPerMonth){
             // donot withdraw 
         }
@@ -50,9 +53,9 @@ class SavingAccount implements BankAccount {
 }
 
 class CreditAccount implements BankAccount{ 
-    private MaxiumWithdrawlsPerMonth : Number; 
-    private CurrentWithdrawls : Number;
-    private Balance : Number; 
+    private MaxiumWithdrawlsPerMonth : number = 0;
+    private CurrentWithdrawls : number = 0;
+    private Balance : number = 0;
 
     CheckBalance(): number {
         throw new Error("Method not implemented.")
@@ -60,7 +63,7 @@ class CreditAccount implements BankAccount{
     Deposit(amount: number): number {
         throw new Error("Method not implemented.")
     }
-    Withdrawl(amount: number) { 
+    Withdrawl(amount: number) : number{ 
         // custom credit account withdrawl logic
         throw new Error("Method not implemented.")
     }
@@ -68,9 +71,9 @@ class CreditAccount implements BankAccount{
 }
 
 class CheckAccount implements BankAccount{ 
-    private MaxiumWithdrawlsPerMonth : Number; 
-    private CurrentWithdrawls : Number;
-    private Balance : Number; 
+    private MaxiumWithdrawlsPerMonth : number = 0; 
+    private CurrentWithdrawls : number = 0;
+    private Balance : number = 0; 
 
     CheckBalance(): number {
         throw new Error("Method not implemented.")
@@ -78,7 +81,7 @@ class CheckAccount implements BankAccount{
     Deposit(amount: number): number {
         throw new Error("Method not implemented.")
     }
-    Withdrawl(amount: number) { 
+    Withdrawl(amount: number) : number { 
         // custom checking account withdrawl logic 
         throw new Error("Method not implemented.")
     }

@@ -10,7 +10,7 @@
 
 class User { 
     
-    private _email : string;
+    private _email : string = '';
 
     public get email() : string {
         return this._email;
@@ -20,7 +20,7 @@ class User {
         this._email = v;
     }
     
-    private _name : string;
+    private _name : string = '';
 
     public get name() : string {
         return this._name;
@@ -29,7 +29,7 @@ class User {
         this._name = v;
     }
     
-    constructor(parameters) {
+    constructor() {
         
     }
 

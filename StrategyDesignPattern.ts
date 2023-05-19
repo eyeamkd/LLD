@@ -4,7 +4,7 @@
 // so that any child classes can call their own version of this function directly 
 
 interface Drive{
-    drive();
+    drive(): any;
 }
 
 class SportDrive implements Drive{

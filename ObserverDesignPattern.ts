@@ -14,17 +14,17 @@
  */  
 
 interface IObservable{
-    AddObserver(observer: Observer)
-    RemoveObserver(observer: Observer)
-    NotifyObservers()
+    AddObserver(observer: Observer) : void
+    RemoveObserver(observer: Observer) : void
+    NotifyObservers() : void
 }
 
 interface IObserver{
-    OnChange()
+    OnChange() : void
 }
 
 class Observable implements IObservable{
-    private readonly ObserverList: [Observer]
+    private readonly ObserverList: Observer[] = []
 
     AddObserver(observer: Observer) {
         this.ObserverList.push(observer)

@@ -16,7 +16,6 @@ interface FileSearchFilter {
 
 class NameSearchFilter implements FileSearchFilter { 
 
-    private readonly params: String[];
 
     search(directoryName: String, params: String[]): String[] {
         throw new Error("Method not implemented.");

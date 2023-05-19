@@ -48,7 +48,7 @@ interface IUserInterface{
 } 
 
 interface IPlayBack{
-    Play(file: IDecodedFile)
+    Play(file: IDecodedFile):any
 }
 
 interface IFileFormatSupport{
